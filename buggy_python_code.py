@@ -3,10 +3,11 @@ import os
 import yaml
 import flask
 
-app = flask.Flask(__name__)
+APP = flask.Flask(__name__)
 
 
 @app.route("/")
+# Fetch website
 def index():
     version = flask.request.args.get("urllib_version")
     url = flask.request.args.get("url")
